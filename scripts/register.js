@@ -1,7 +1,7 @@
 // ------------------- //
 // CONFIG STUFF, PLEASE PASTE:
 // after this, you have conf.server, conf.id and conf.token
-// use like this (ex.): `${conf.server}/chat/` instead of hard-coding the values 
+// use like this (ex.): `${conf.server}/chat/` instead of hard-coding the values
 let conf = {}
 import('./config/config.js').then(module => {
     conf = module.val();
@@ -24,9 +24,7 @@ function checkIfNameExists(name) {
         console.log('does exist')
         return true
     }
-
 }
-
 
 document.getElementById('checkSubmission').onsubmit = function (evt) {
 
@@ -71,4 +69,3 @@ document.getElementById('checkSubmission').onsubmit = function (evt) {
     }
 
 }
-
