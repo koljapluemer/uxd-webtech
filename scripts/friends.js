@@ -13,7 +13,6 @@ import ('./config/config.js').then(module => {
 // HTML ELEMENTE ALS GLOBALE VARIABLEN
 const input = document.getElementById('username')
 const recommendations = document.getElementById('recommendations')
-let users = []
 
 // EVENT LISTENER, UM BEIM KLICK AUF EINEN NAMEN DEN NAMEN IN DAS INPUT FELD ZU SCHREIBEN
 function autocompleteName(event) {
@@ -38,13 +37,13 @@ function getAllUsers() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            users = JSON.parse(xmlhttp.responseText);
+            const users = JSON.parse(xmlhttp.responseText);
             // FILTERE NUR DIE NUTZER, IN DENEN DER STRING IM INPUT FELD VORKOMMT - IGNORIERE GROẞ-KLEINSCHREIBUNG
             const relevantUsers = users.filter(user => user.toLowerCase().includes(input.value.toLowerCase()))
             ul = document.createElement('ul')
                 // ERSTELLE EINE LISTE MIT ALLEN NUTZERN, DIE AUCH ANGEKLICKT WERDEN KÖNNEN
             recommendations.innerHTML = ''
-            for (user of relevantUsers) {
+            for (const user of relevantUsers) {
                 li = document.createElement('li')
                 li.innerHTML = user
                 li.style = 'cursor: pointer'

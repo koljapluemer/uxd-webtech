@@ -1,51 +1,49 @@
 <!doctype html>
 <html>
 
-  <head>
+<head>
     <title>Webtech | Friends</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700&display=swap"
-      rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main.css">
 
-  </head>
-  
+</head>
+
 
 <body>
-  <header>
-    <h1>Friends</h1>
-    <p>&lt; <a class="button" href="./logout.html">Logout</a> | <a class="button"
-        href="./settings.html">Settings</a> </p>
-  </header>
-  <main>
-    <ul id="friendlist">
-      <!-- the link tags here a closed twice -->
-      <li><a href="./chat.html">Tom(3)</li>
+    <header>
+        <h1>Friends</h1>
+        <p>&lt; <a href="./logout.html">Logout</a> | <a href="./settings.html">Settings</a> </p>
+    </header>
+    <main>
+        <ul id="friendlist">
+            <!-- the link tags here a closed twice -->
+            <li><a href="./chat.html">Tom(3)</li>
       <li><a href="#">Marvin(1)</a></li>
-      <li><a href="#">Tick</a></li>
-      <li><a href="#">Trick</a></li>
-    </ul>
-    <hr>
-    <h2>New Request</h2>
-    <ol>
-      <li>Friend request from Track</li>
-    </ol>
-    <hr>
-    <form autocomplete="off" onsubmit="return validateName()">
+            <li><a href="#">Tick</a></li>
+            <li><a href="#">Trick</a></li>
+        </ul>
+        <hr>
+        <h2>New Request</h2>
+        <ol>
+            <li>Friend request from Track</li>
+        </ol>
+        <hr>
+        <form autocomplete="off" onsubmit="return validateName()">
 
-      <input autocomplete="off" type="text" placeholder="Add Friend to List" id="username" name="username">
-      <input class="button" type="submit" value="Add">
+            <input autocomplete="off" type="text" placeholder="Add Friend to List" id="username" name="username">
+            <input class="button" type="submit" value="Add">
 
 
-      <div id="recommendations">Start typing to see friend recommendations...</div>
-    </form>
-  </main>
+            <div id="recommendations">Start typing to see friend recommendations...</div>
+        </form>
+    </main>
 
-  <script src='./scripts/friends.js'></script>
+    <script src='./scripts/friends.js'></script>
 </body>
 
 </html>

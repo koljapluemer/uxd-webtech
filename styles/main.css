@@ -1,42 +1,58 @@
 /* GENERAL VIBE  */
 
-
 body {
     background: #36393F;
     color: #cbcfd4;
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
     border: 2px solid #333;
     margin: 12px;
-  }
-  
-  html, body, header, main, div, header, h1, h2, h3, h4, h5, h6, p {
+}
+
+html,
+body,
+header,
+main,
+div,
+header,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin: 0;
     padding: 0;
-  }
+}
 
-  /* RESPONSIVE OR SOMETHING */
 
-  body {
+/* RESPONSIVE OR SOMETHING */
+
+body {
     width: min(900px, 100%);
     margin: auto;
     box-sizing: border-box;
-  }
-  
+}
 
 
 /* SPECIFIC HTML ELEMENTS */
+
+body {
+    display: flex;
+    flex-direction: column;
+}
 
 h1 {
     padding: 0 12px;
     margin: 12px 0;
     font-size: 22px;
     line-height: 22px;
-  }
+}
 
 main {
     padding: 12px 24px;
     font-size: 18px;
-  }
+}
 
 header {
     border-bottom: 2px solid #333;
@@ -49,25 +65,27 @@ header {
 form {
     border: 2px solid #333;
     padding: 12px;
-  }
-
+}
 
 a {
     text-decoration: none;
     color: #cbcfd4;
-  }
+}
 
-  a:hover {
+a:hover {
     filter: brightness(2);
-  }
-  
+}
+
 fieldset {
     display: flex;
     flex-direction: column;
     padding: 12px;
 }
 
-input, select, textarea, ul {
+input,
+select,
+textarea,
+ul {
     flex-grow: 1;
     font-size: 18px;
     padding: 8px;
@@ -76,42 +94,40 @@ input, select, textarea, ul {
     background: #52545c;
     color: #cbcfd4;
     margin-bottom: 12px;
-  }
+    min-height: 30px;
+}
 
-
-legend{
+legend {
     font-size: 18px;
     padding: 10px;
-  }
+}
 
-  hr{
+hr {
     color: #242830;
 }
 
-ol li{ 
-  color: #c4aff5;
-  padding: 5px;
+ol li {
+    color: #c4aff5;
+    padding: 5px;
 }
 
 ul {
-  list-style-type: none;
-  padding: 0;
-  border: 1px solid #242830; 
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #242830;
 }
 
 ul li {
-  padding: 8px 16px;
-  color: #242830;
-  
+    padding: 8px 16px;
+    color: #242830;
 }
+
+
 /* CUSTOM CLASSES TO DESIGN STUFF  */
 
-
-  
 #remove-friend {
-color: #9c5f5f
+    color: #9c5f5f
 }
-
 
 .button {
     /* this is a class and not the button html selector so you can 
@@ -123,64 +139,71 @@ just apply it to links as well if you are so inclined */
     background: #52545c;
     cursor: pointer;
     margin: 12px 0;
-  }
+    font-size: 18px;
+    padding: 8px;
+    min-height: 30px;
+    line-height: 27px;
+}
 
-  .button-primary {
+.button-primary {
     background: #5865F2;
     color: #fff;
-  }
+}
 
-  .name {
+.name {
     color: #fff;
     font-weight: bold;
-  }
+}
 
-  .time {
+.time {
     font-size: 10px;
     margin-left: 12px;
     opacity: .6;
-  }
-  
-  .message {
+}
+
+.message {
     display: flex;
     flex-direction: column;
     margin-bottom: 12px;
-  }
+}
 
-  .header-img {
+.header-img {
     margin-left: 24px;
 }
+
 
 /* media queries for forms */
 
 .label-input-wrapper {
-  display: flex;
-  gap: 12px;
-  justify-content: space-between;
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
 }
 
 .label-input-wrapper label {
-  min-width: 25%;
+    min-width: 25%;
 }
 
 @media only screen and (max-width: 900px) {
-  .label-input-wrapper {
-    flex-direction: column;
-  }
+    .label-input-wrapper {
+        flex-direction: column;
+    }
 }
+
+
 /* SUBPAGES */
+
 
 /* SUBPAGE: chat */
 
-  
-  #msg-form {
+#msg-form {
     display: flex;
     gap: 12px;
     width: 100%;
     margin-top: 24px;
-  }
-  
-  #msg-input {
+}
+
+#msg-input {
     flex-grow: 1;
     font-size: 18px;
     padding: 8px;
@@ -188,9 +211,9 @@ just apply it to links as well if you are so inclined */
     border: none;
     background: #52545c;
     color: #cbcfd4;
-  }
-  
-  #msg-send {
+}
+
+#msg-send {
     font-size: 18px;
     padding: 8px 32px;
     border: none;
@@ -198,56 +221,56 @@ just apply it to links as well if you are so inclined */
     background: #5865F2;
     color: #fff;
     cursor: pointer;
-  }
+}
 
-  #chat-wrapper {
+#chat-wrapper {
     max-height: 300px;
     overflow-y: auto
-  }
+}
 
-  
-  #msg-send:hover {
+#msg-send:hover {
     filter: brightness(.85);
-  }
-  
-  /* SUBPAGE: register */
+}
 
+
+/* SUBPAGE: register */
 
 
 /* SUBPAGE: logout */
 
-
-#logout-img{
-    border-radius : 50%;
+#logout-img {
+    border-radius: 50%;
     height: 100px;
     width: 100px;
-    
 }
 
 
 /* PROFILE */
 
 #profile {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  gap: 12px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 12px;
 }
 
 #profile-img {
-  max-width: 100%;
-  max-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 #profile-info {
-  border: 1px solid #242830; 
-  padding: 12px;
+    border: 1px solid #242830;
+    padding: 12px;
 }
+
 
 /* SUBPAGE: friends */
 
+
 /* SUBPAGE: logout */
+
 #logout-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
